@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { X, CheckCircle2 } from 'lucide-react';
+import problemSolutionBg from '@/assets/problem-solution-bg.jpg';
 
 export const ProblemSolution = () => {
   const painPoints = [
@@ -9,8 +10,18 @@ export const ProblemSolution = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-card">
-      <div className="container mx-auto">
+    <section 
+      className="py-20 px-4 relative"
+      style={{
+        backgroundImage: `url(${problemSolutionBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/70" />
+      <div className="container mx-auto relative z-10">
         {/* Headline */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
