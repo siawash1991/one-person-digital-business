@@ -18,9 +18,14 @@ export default {
     },
     extend: {
       fontFamily: {
-        bagel: ['Bagel Fat One', 'cursive'],
+        vazir: ['Vazirmatn', 'sans-serif'],
       },
       colors: {
+        cta: {
+          DEFAULT: "hsl(var(--cta))",
+          hover: "hsl(var(--cta-hover))",
+          foreground: "hsl(var(--cta-foreground))",
+        },
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
