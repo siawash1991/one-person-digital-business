@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,34 +7,39 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --card: #fafafa;
-  --card-foreground: #0a0a0a;
-  --popover: #ffffff;
-  --popover-foreground: #0a0a0a;
-  --primary: #0a0a0a;
-  --primary-foreground: #ffffff;
-  --secondary: #f4f4f5;
-  --secondary-foreground: #0a0a0a;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --accent: #f4f4f5;
-  --accent-foreground: #0a0a0a;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: #e4e4e7;
-  --input: #f4f4f5;
-  --input-background: #ffffff;
-  --switch-background: #e4e4e7;
+  --background: 0 0% 7%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 10%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 7%;
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 64%;
+  --accent: 0 0% 15%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --input: 0 0% 15%;
+  --input-background: 0 0% 10%;
+  --switch-background: 0 0% 20%;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #a1a1aa;
+  --ring: 0 0% 45%;
   
-  /* Simplified accent colors */
-  --accent-blue: #2563eb;
-  --accent-emerald: #059669;
-  --accent-purple: #7c3aed;
+  /* Accent colors */
+  --accent-blue: 217 91% 60%;
+  --accent-emerald: 160 84% 39%;
+  --accent-purple: 263 70% 58%;
+  
+  /* CTA color */
+  --cta: 0 84% 60%;
+  --cta-hover: 0 84% 55%;
+  --cta-foreground: 0 0% 100%;
   
   --radius: 0.75rem;
 }
@@ -119,8 +124,15 @@
   }
   
   /* Font utility classes */
-  .font-bagel {
-    font-family: 'Bagel Fat One', cursive;
+  .font-vazir {
+    font-family: 'Vazirmatn', sans-serif;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--accent-purple)), hsl(var(--cta)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   /* Simplified utility classes */
