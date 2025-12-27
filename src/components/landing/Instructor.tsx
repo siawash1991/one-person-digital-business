@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Instagram, Youtube, Linkedin, CheckCircle2 } from 'lucide-react';
+import instructorPhoto from '@/assets/instructor-photo.jpeg';
 
 export const Instructor = () => {
   const credentials = [
@@ -47,11 +48,13 @@ export const Instructor = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square rounded-3xl overflow-hidden glass-effect">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/30 to-accent-blue/30" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-6xl">👨‍💻</div>
-              </div>
+            <div className="aspect-square rounded-3xl overflow-hidden glass-effect relative">
+              <img 
+                src={instructorPhoto} 
+                alt="سیاوش - مدرس دوره"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/20 to-accent-blue/20" />
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-4 -left-4 glass-effect px-4 py-2 rounded-xl">
