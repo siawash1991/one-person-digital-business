@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Clock, Target } from 'lucide-react';
+import curriculumBg from '@/assets/curriculum-bg.jpg';
 
 export const Curriculum = () => {
   const sessions = [
@@ -70,14 +71,17 @@ export const Curriculum = () => {
       id="courses" 
       className="py-20 px-4 relative overflow-hidden"
       style={{
-        background: `
+        backgroundImage: `
           linear-gradient(135deg, 
-            rgba(26, 54, 93, 0.95) 0%, 
-            rgba(45, 55, 72, 0.9) 30%,
-            rgba(139, 115, 85, 0.85) 60%,
-            rgba(212, 165, 116, 0.8) 100%
-          )
-        `
+            rgba(26, 54, 93, 0.85) 0%, 
+            rgba(45, 55, 72, 0.8) 30%,
+            rgba(139, 115, 85, 0.75) 60%,
+            rgba(212, 165, 116, 0.7) 100%
+          ),
+          url(${curriculumBg})
+        `,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
       }}
     >
       {/* Hopper-style window light effect */}
