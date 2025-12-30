@@ -1,33 +1,25 @@
-import { Header } from './components/landing/Header'
-import { HeroSection } from './components/landing/HeroSection'
-import { SocialProof } from './components/landing/SocialProof'
-import { ProblemSolution } from './components/landing/ProblemSolution'
-import { Curriculum } from './components/landing/Curriculum'
-import { FreeSession } from './components/landing/FreeSession'
-import { Instructor } from './components/landing/Instructor'
-import { Pricing } from './components/landing/Pricing'
-import { Guarantee } from './components/landing/Guarantee'
-import { FAQ } from './components/landing/FAQ'
-import { FinalCTA } from './components/landing/FinalCTA'
-import { LandingFooter } from './components/landing/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'sonner';
+import { AuthProvider } from '@/hooks/useAuth';
+import Landing from '@/pages/Landing';
+import Auth from '@/pages/Auth';
+import Dashboard from '@/pages/Dashboard';
+import Lesson from '@/pages/Lesson';
+import NotFound from '@/pages/NotFound';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground dark">
-      <Header />
-      <main>
-        <HeroSection />
-        <SocialProof />
-        <ProblemSolution />
-        <Curriculum />
-        <FreeSession />
-        <Instructor />
-        <Pricing />
-        <Guarantee />
-        <FAQ />
-        <FinalCTA />
-      </main>
-      <LandingFooter />
-    </div>
-  )
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/lesson/:id" element={<Lesson />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+      <Toaster position="top-center" richColors />
+    </AuthProvider>
+  );
 }

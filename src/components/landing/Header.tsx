@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Volume2, VolumeX } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -45,9 +46,11 @@ export const Header = () => {
               {isSoundOn ? <Volume2 size={20} /> : <VolumeX size={20} />}
             </button>
             
-            <Button className="hidden md:inline-flex bg-cta hover:bg-cta-hover text-cta-foreground font-vazir">
-              ثبت‌نام در دوره
-            </Button>
+            <Link to="/auth">
+              <Button className="hidden md:inline-flex bg-cta hover:bg-cta-hover text-cta-foreground font-vazir">
+                ثبت‌نام در دوره
+              </Button>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button
@@ -74,9 +77,11 @@ export const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button className="bg-cta hover:bg-cta-hover text-cta-foreground font-vazir w-full">
-                ثبت‌نام در دوره
-              </Button>
+              <Link to="/auth">
+                <Button className="bg-cta hover:bg-cta-hover text-cta-foreground font-vazir w-full">
+                  ثبت‌نام در دوره
+                </Button>
+              </Link>
             </div>
           </nav>
         )}

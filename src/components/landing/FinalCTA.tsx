@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -31,13 +32,15 @@ export const FinalCTA = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <Button
-            size="lg"
-            className="bg-cta hover:bg-cta-hover text-cta-foreground text-xl px-12 py-8 font-vazir pulse-glow group"
-          >
-            همین الان شروع کن
-            <ArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/auth">
+            <Button
+              size="lg"
+              className="bg-cta hover:bg-cta-hover text-cta-foreground text-xl px-12 py-8 font-vazir pulse-glow group"
+            >
+              همین الان شروع کن
+              <ArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

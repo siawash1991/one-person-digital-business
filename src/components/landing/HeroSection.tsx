@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBackground from '@/assets/hero-background.jpeg';
@@ -90,9 +91,11 @@ export const HeroSection = () => {
           transition={{ duration: 0.6, delay: 1 }}
           className="text-center"
         >
-          <Button size="lg" className="bg-cta hover:bg-cta-hover text-cta-foreground text-lg px-8 py-6 font-vazir pulse-glow">
-            دریافت جلسه اول رایگان
-          </Button>
+          <Link to="/auth">
+            <Button size="lg" className="bg-cta hover:bg-cta-hover text-cta-foreground text-lg px-8 py-6 font-vazir pulse-glow">
+              دریافت جلسه اول رایگان
+            </Button>
+          </Link>
           <p className="text-sm text-muted-foreground mt-3 font-vazir">
             بدون نیاز به کارت اعتباری
           </p>
