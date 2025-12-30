@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Check, Crown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -118,16 +119,18 @@ export const Pricing = () => {
               </ul>
 
               {/* CTA */}
-              <Button
-                className={`w-full font-vazir ${
-                  plan.highlighted
-                    ? 'bg-cta hover:bg-cta-hover text-cta-foreground'
-                    : 'bg-background hover:bg-background/80 border border-border'
-                }`}
-                size="lg"
-              >
-                انتخاب پکیج
-              </Button>
+              <Link to="/auth">
+                <Button
+                  className={`w-full font-vazir ${
+                    plan.highlighted
+                      ? 'bg-cta hover:bg-cta-hover text-cta-foreground'
+                      : 'bg-background hover:bg-background/80 border border-border'
+                  }`}
+                  size="lg"
+                >
+                  انتخاب پکیج
+                </Button>
+              </Link>
             </motion.div>
           ))}
         </div>
